@@ -15,7 +15,7 @@ npm run serve
 https://affiliate.itunes.apple.com/resources/documentation/itunes-store-web-service-search-api
 
 
-### Free api my best
+### Free api (My best...)
 
 
  https://ghibliapi.herokuapp.com
