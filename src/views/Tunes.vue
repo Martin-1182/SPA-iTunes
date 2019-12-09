@@ -1,72 +1,25 @@
 <template>
 	<div>
 		<h1>Tunes</h1>
-		<form action="#" @submit.prevent="getMusic()">
-			<input v-model="query" type="text" />
-		</form>
-		<ul>
-			<li v-for="song in songs" :key="song.id">
-				<div v-if="song.cover">
-					<img :src="song.cover" alt="Album cover image" />
-				</div>
-				<p>
-					<strong>{{ song | songify }}</strong>
-				</p>
-				<figure v-if="song.audioFile">
-					<figcaption>Listen to the T-Rex:</figcaption>
-					<audio controls :src="song.audioFile"></audio>
-				</figure>
-			</li>
-		</ul>
+		<tunes-search-form @add-new-songs="songs = $event" />
+		<tunes-list :new-songs="songs" />
 	</div>
 </template>
 
 <script>
-import axios from 'axios'
+import TunesSearchForm from '@/components/tunes/TunesSearchForm'
+import TunesList from '@/components/tunes/TunesList'
 
 export default {
 	data() {
 		return {
-			query: '',
-			songs: [],
-			limit: 5
+			songs: []
 		}
 	},
-	filters: {
-		songify: function(song) {
-			return song.artist + ' - ' + song.name
-		}
-	},
-	methods: {
-		getMusic() {
-			console.log(this.query)
 
-			axios
-				.get(
-					`https://itunes.apple.com/search
-						?term=${encodeURI(this.query)}
-						&entity=musicTrack
-						&limit=${this.limit}`
-				)
-				.then(response => {
-					this.songs = []
-
-					response.data.results.forEach(song => {
-						if (song.kind === 'song')
-							this.songs.push(this.extractData(song))
-					})
-				})
-		},
-		extractData({
-			trackId: id,
-			artistName: artist,
-			previewUrl: audioFile,
-			artworkUrl100: cover,
-			trackName: name,
-			collectionName: album
-		}) {
-			return { id, artist, audioFile, cover, name, album }
-		}
+	components: {
+		TunesSearchForm,
+		TunesList
 	}
 }
 </script>
