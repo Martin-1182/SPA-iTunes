@@ -22,3 +22,6 @@ npm run lint
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
+
+### itunes web api
+:: https://affiliate.itunes.apple.com/resources/documentation/itunes-store-web-service-search-api
