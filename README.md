@@ -1,4 +1,4 @@
-# spa
+# SPA iTunes
 
 ## Project setup
 ```
