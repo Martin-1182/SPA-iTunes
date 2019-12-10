@@ -1,5 +1,5 @@
 <template>
-	<li>
+	<article class="tunes-song">
 		<div v-if="song.cover">
 			<img :src="song.cover" alt="Album cover image" />
 		</div>
@@ -10,7 +10,7 @@
 			<figcaption>Listen to the T-Rex:</figcaption>
 			<audio controls :src="song.audioFile"></audio>
 		</figure>
-	</li>
+	</article>
 </template>
 
 <script>
@@ -28,4 +28,8 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.tunes-song {
+	margin-bottom: 3em;
+}
+</style>

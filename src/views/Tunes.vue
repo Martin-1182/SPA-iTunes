@@ -1,6 +1,6 @@
 <template>
 	<div>
-		<h1>Tunes</h1>
+		<h1>iTunes</h1>
 		<tunes-search-form @add-new-songs="songs = $event" />
 		<tunes-list :new-songs="songs" />
 	</div>

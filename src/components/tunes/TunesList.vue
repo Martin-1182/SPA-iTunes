@@ -1,17 +1,25 @@
 <template>
 	<ul class="tunes-list">
-		<tunes-list-song v-for="song in newSongs" :key="song.id" :song="song" />
+		<li>
+			<tunes-song v-for="song in newSongs" :key="song.id" :song="song" />
+		</li>
 	</ul>
 </template>
 
 <script>
-import TunesListSong from '@/components/tunes/TunesListSong'
+import TunesSong from '@/components/tunes/TunesSong'
 export default {
 	components: {
-		TunesListSong
+		TunesSong
 	},
 	props: ['new-songs']
 }
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+ul {
+	margin-top: 3em;
+	padding-left: 0;
+	list-style: none;
+}
+</style>

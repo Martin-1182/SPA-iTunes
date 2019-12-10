@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import App from './App.vue'
 import router from './router'
+require('../node_modules/@fortawesome/js/fontawesome-all')
 
 Vue.config.productionTip = false
 

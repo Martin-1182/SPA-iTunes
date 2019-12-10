@@ -1,6 +1,6 @@
 <template>
 	<div class="home">
-		<img alt="Vue logo" src="../assets/logo.png" />
+		<img alt="iTunes logo" src="../assets/iTunes-logo.png" height="150" />
 		<hello-world msg="Welcome to Your Vue.js App" />
 	</div>
 </template>
