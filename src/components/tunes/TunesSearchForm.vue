@@ -61,7 +61,7 @@ export default {
 input {
 	display: block;
 	margin: 0 auto;
-	width: 30%;
+	width: 32%;
 	padding: 0.5em;
 	font-size: 1.5em;
 	font-weight: 700;
@@ -83,7 +83,7 @@ input:focus {
 @media screen and (max-width: 1400px) {
 	input {
 		display: block;
-		width: 58%;
+		width: 57%;
 		font-size: 1.15em;
 		margin: 0 auto;
 	}

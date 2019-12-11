@@ -56,7 +56,7 @@ export default {
 @import '@/assets/scss/_variables.scss';
 .tunes-song {
 	position: relative;
-	transition: 0.1s;
+	transition: 0.4s;
 }
 .card-img {
 	width: 100%;
