@@ -23,7 +23,7 @@ export default {
 	methods: {
 		search: debounce(function() {
 			this.getMusic()
-		}, 500),
+		}, 300),
 		getMusic() {
 			axios
 				.get(
@@ -38,6 +38,9 @@ export default {
 						.map(song => this.extractData(song))
 
 					this.$emit('add-new-songs', iTunesSongs)
+				})
+				.catch(error => {
+					console.log(error)
 				})
 		},
 		extractData({

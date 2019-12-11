@@ -17,7 +17,7 @@
 							</h3>
 							<figure v-if="song.audioFile">
 								<figcaption>
-									{{ song.name | shorten(20) }}
+									{{ song.name | shorten(18) }}
 								</figcaption>
 								<audio
 									class="shadow mt-4 mb-0"
@@ -56,7 +56,7 @@ export default {
 @import '@/assets/scss/_variables.scss';
 .tunes-song {
 	position: relative;
-	transition: 0.4s;
+	transition: 0.2s;
 }
 .card-img {
 	width: 100%;
