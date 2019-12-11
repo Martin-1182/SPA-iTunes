@@ -17,3 +17,18 @@ body {
 	text-align: center;
 	color: whitesmoke;
 }
+[v-cloak] {
+	display: none;
+}
+.fade-enter-active {
+	transition: all 0.2s ease;
+}
+
+.fade-enter {
+	transform: scale(0.9);
+}
+@media screen and(max-width: 520px) {
+	#app {
+		font-size: 0.85em;
+	}
+}

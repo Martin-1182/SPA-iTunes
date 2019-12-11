@@ -1,11 +1,17 @@
 <template>
 	<form action="#" @submit.prevent="getMusic()">
-		<input v-model="query" type="text" />
+		<input
+			v-model="query"
+			ref="searchInput"
+			type="text"
+			@keyup="search()"
+		/>
 	</form>
 </template>
 
 <script>
 import axios from 'axios'
+import { debounce } from 'lodash-es'
 export default {
 	data() {
 		return {
@@ -15,9 +21,10 @@ export default {
 		}
 	},
 	methods: {
+		search: debounce(function() {
+			this.getMusic()
+		}, 500),
 		getMusic() {
-			console.log(this.query)
-
 			axios
 				.get(
 					`https://itunes.apple.com/search
@@ -43,6 +50,9 @@ export default {
 		}) {
 			return { id, artist, audioFile, cover, name, album }
 		}
+	},
+	mounted() {
+		this.$refs.searchInput.focus()
 	}
 }
 </script>
