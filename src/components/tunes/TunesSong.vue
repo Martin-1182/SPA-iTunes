@@ -1,23 +1,23 @@
 <template>
 	<transition name="fade">
 		<article v-cloak class="tunes-song">
-			<div class="card mb-3" style="width: 600px;">
+			<div class="card mb-3" style="max-width: 600px;">
 				<div class="row no-gutters">
 					<div class="col-md-4" v-if="song.cover">
 						<img
 							:src="song.cover"
-							class="card-img"
+							class="card-img shadow"
 							alt="Album cover image"
 						/>
 					</div>
 					<div class="col-md-8">
 						<div class="card-body pb-0">
 							<h3 class="card-title">
-								{{ song.artist | shorten(30) }}
+								{{ song.artist | shorten(25) }}
 							</h3>
 							<figure v-if="song.audioFile">
 								<figcaption>
-									{{ song.name | shorten(25) }}
+									{{ song.name | shorten(20) }}
 								</figcaption>
 								<audio
 									class="shadow mt-4 mb-0"
@@ -63,6 +63,10 @@ export default {
 	height: 100%;
 	position: relative;
 	overflow: hidden;
+	@media screen and (max-width: 450px) {
+		height: fit-content;
+		width: fit-content;
+	}
 }
 .card {
 	background-color: #252525;
@@ -75,6 +79,21 @@ export default {
 		position-y: 2.6%;
 		position-x: 98.9%;
 		size: 1.4em;
+	}
+	@media screen and (max-width: 450px) {
+		padding-top: 1em;
+		margin: 2em 0.4em 2em !important;
+		background: {
+			position-y: 1.2%;
+			position-x: 98.9%;
+			size: 2em;
+		}
+		.card-title {
+			font-size: 1.3em;
+		}
+		figcaption {
+			font-size: 0.7em;
+		}
 	}
 }
 audio {
