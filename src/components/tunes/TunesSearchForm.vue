@@ -40,7 +40,7 @@ export default {
 					this.$emit('add-new-songs', iTunesSongs)
 				})
 				.catch(error => {
-					console.log(error)
+					error
 				})
 		},
 		extractData({
