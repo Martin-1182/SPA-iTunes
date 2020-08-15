@@ -1,7 +1,12 @@
 <template>
 	<div id="app">
 		<header>
-			<the-navigation />
+			<div class="top-nav">
+				<div class="nav-logo">
+					<img src="./assets/Logo.png" alt="logo" />
+				</div>
+				<the-navigation />
+			</div>
 		</header>
 
 		<main class="content">
@@ -21,4 +26,26 @@ export default {
 
 <style lang="scss">
 @import './assets/scss/main.scss';
+.top-nav {
+	display: flex;
+	justify-content: space-between;
+	img {
+		height: 60px;
+		padding: 0 1.2em;
+		margin: 2em 2.5em;
+		display: inline-block;
+		vertical-align: middle;
+		background: transparent;
+		white-space: nowrap;
+	}
+}
+@media only screen and (max-width: 992px) {
+	.top-nav {
+		display: block;
+		img {
+			height: 50px;
+			margin-bottom: 0;
+		}
+	}
+}
 </style>

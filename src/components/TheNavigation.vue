@@ -13,7 +13,7 @@ export default {}
 <style lang="scss" scoped>
 .navigation {
 	padding: 0 1.2em;
-	margin: 2em auto 2.5em;
+	margin: 2em 2.5em;
 	display: inline-block;
 	vertical-align: middle;
 	background: transparent;

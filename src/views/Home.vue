@@ -1,6 +1,5 @@
 <template>
 	<div class="home">
-		<img alt="iTunes logo" src="../assets/iTunes-logo.png" height="150" />
 		<hello-world msg="Welcome to Your Vue.js App" />
 		<tunes-song class="mt-5" :song="song" />
 	</div>

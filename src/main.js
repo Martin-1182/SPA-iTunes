@@ -4,7 +4,6 @@ import router from './router'
 import MyHelper from './helpers'
 
 Vue.use(MyHelper)
-require('../node_modules/@fortawesome/js/fontawesome-all')
 
 Vue.config.productionTip = false
 
