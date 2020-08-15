@@ -1,7 +1,7 @@
 const MyHelper = {
 	install(Vue) {
 		Vue.prototype.$log = function(data) {
-			console.log(data)
+			return data
 		}
 	}
 }
