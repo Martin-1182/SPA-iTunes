@@ -1,7 +1,10 @@
 # SPA iTunes
+ Application to search for songs and albums from iTunes.  
+ 
+ [Live link](https://itunes.websystem.sk)
 
+### Installation:
 
-## Project setup
 ```
 npm install
 ```
@@ -10,15 +13,19 @@ npm install
 npm run serve
 ```
 
-### iTunes web api
+### 
 
-https://affiliate.itunes.apple.com/resources/documentation/itunes-store-web-service-search-api
-
-
-### Free api (My best...)
+* [Search API](https://affiliate.itunes.apple.com/resources/documentation/itunes-store-web-service-search-api)
+ 
 
 
- https://ghibliapi.herokuapp.com
- https://api.nasa.gov
- https://pokeapi.com
- https://api.abalin.net
+### Useful links **Free api** ( My best... )
+
+
+ * https://ghibliapi.herokuapp.com  
+
+ * https://api.nasa.gov  
+
+ * https://pokeapi.com  
+
+ * https://api.abalin.net
