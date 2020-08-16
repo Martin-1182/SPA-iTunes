@@ -13,9 +13,15 @@ git clone & cd to app
 ```
 npm install
 ```
-### Compiles and hot-reloads for development
+### Compiles and hot-reloads for development  
+
+#### development
 ```
 npm run serve
+```  
+#### live
+```
+npm run build
 ```
 
 ### 
